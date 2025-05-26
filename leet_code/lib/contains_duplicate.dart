@@ -29,27 +29,12 @@
 // }
 
 // using set
-// class Solutions {
-//   bool containsDuplicate(List<int> nums) {
-//     Set<int> result = {};
-
-//     for (var element in nums) {
-//       if (result.contains(element)) {
-//         return true;
-//       }
-//       result.add(element);
-//     }
-//     return false;
-//   }
-// }
-
-// using sorting
 class Solutions {
   bool containsDuplicate(List<int> nums) {
-    List<int> result = List.from(nums)..sort();
+    Set<int> result = {};
 
-    for (var element in result) {
-      if (element == element+1 ) {
+    for (var element in nums) {
+      if (result.contains(element)) {
         return true;
       }
       result.add(element);
@@ -57,3 +42,15 @@ class Solutions {
     return false;
   }
 }
+
+// using sorting
+// class Solutions {
+//   bool containsDuplicate(List<int> nums) {
+//     nums.sort();
+
+//     for (int i = 0; i < nums.length - 1; i++) {
+//       if ( nums[i] ==nums[i +1] ) return true;
+//     }
+//       return false;
+//   }
+// }
