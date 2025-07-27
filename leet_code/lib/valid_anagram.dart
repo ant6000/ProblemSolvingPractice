@@ -7,15 +7,16 @@ Output: false
 
 class Solution {
   bool isAnagram(String s, String t) {
-    Map<String, String> result = {};
+    List<String> list1 = [];
     if (s.length != t.length) {
       return false;
     } else {
       for (var i = 0; i < s.length; i++) {
-        
+        s.split('');
+        list1.add(s);
       }
     }
-    print(s.length);
+    print(list1);
     return true;
   }
 }
